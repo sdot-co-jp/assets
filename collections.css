@@ -53,6 +53,17 @@ h2,
     max-width: none;
     max-height: none;
 }
+.sn-image-wrapper {
+    position: relative;
+}
+.sn-image-placeholder {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 .sn-scalable {
     cursor: -webkit-zoom-in;
     cursor: -moz-zoom-in;
@@ -110,4 +121,30 @@ h2,
     background-image: url(compositions-hub.png);
     width: 154.5px;
     background-position: 0 4px;
+}
+
+.permalink .tag-navigation li.drawings a,
+.permalink .tag-navigation li.drawings span {
+    background-image: url(drawings-hub2.png);
+    width: 128.5px;
+    background-position: 0 0;
+}
+
+.permalink .tag-navigation li.drawings a:hover {
+    background-image: url(drawings-hub3.png);
+    width: 128.5px;
+    background-position: 0 0;
+}
+
+.permalink .tag-navigation li.compositions a,
+.permalink .tag-navigation li.compositions span {
+    background-image: url(compositions-hub2.png);
+    width: 170px;
+    background-position: 0 0;
+}
+
+.permalink .tag-navigation li.compositions a:hover {
+    background-image: url(compositions-hub3.png);
+    width: 170px;
+    background-position: 0 0;
 }
