@@ -148,3 +148,7 @@ h2,
     width: 170px;
     background-position: 0 0;
 }
+
+img.sn-target-image {
+    -webkit-touch-callout: none !important;
+}

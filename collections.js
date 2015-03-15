@@ -9,21 +9,23 @@ jQuery(function($){
                 $(this).remove();
                 return;
             }
-            var largeImage = $(this).clone();
+
+            $target = $(this).siblings(".sn-target-image");
+            var largeImage = $target.clone();
             largeImage.css({
                 position : "absolute",
                 top: 0,
                 left: 0,
                 width: "auto",
                 zIndex: 9999
-            }).addClass("sn-zooming-image");
+            }).addClass("sn-scalable sn-zooming-image");
             $body.append(largeImage);
 
             // add noop event for custom browser
             largeImage.on("click", function (e) {});
 
-            var factorX = (largeImage.width() - window.innerWidth) / $(this).width();
-            var factorY = (largeImage.height() - window.innerHeight) / $(this).height();
+            var factorX = (largeImage.width() - window.innerWidth) / $target.width();
+            var factorY = (largeImage.height() - window.innerHeight) / $target.height();
             window.scrollTo(e.offsetX * factorX, e.offsetY * factorY);
         }
     })
